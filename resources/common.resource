@@ -7,7 +7,9 @@ ${BROWSER}       chrome
 ${USERNAME}      Admin
 ${PASSWORD}      admin123
 ${DASHBOARD_H1}  css=h6.oxd-topbar-header-breadcrumb-module
-${search_term}   Admin
+${search_Admin}   Admin
+${search_Pim}   PIM
+${search_Claim}   Claim
 
 *** Keywords ***
 Open App
@@ -34,11 +36,18 @@ Should See Dashboard
     Wait Until Element Is Visible    ${DASHBOARD_H1}    10s
     Page Should Contain    Dashboard
 
-Test Search
-    Click Element       css=input[placeholder="Search"]
-    Input Text    css=input[placeholder="Search"]    ${search_term}
+Search
+    Click Element    css=input[placeholder="Search"]
+    Input Text    css=input[placeholder="Search"]    ${search_Pim} 
     Press Keys    css=input[placeholder="Search"]    RETURN
-    Wait Until Page Contains    ${search_term}    5s
+    Wait Until Page Contains    ${search_Pim}     5s
+
+PIM
+    Click Element    xpath=//span[text()="${search_Pim}"]
+    Wait Until Page Contains    Employee Information     5s
+    Click Element    (//input[@placeholder="Type for hints..."])[1]
+    Input Text    (//input[@placeholder="Type for hints..."])[1]    Nezuko
+    Click Element   css=button[type="submit"]
 
 Logout
     Click Element   css=span.oxd-userdropdown-tab
