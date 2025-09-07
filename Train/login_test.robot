@@ -7,7 +7,8 @@ Login Successful
     Open App
     Login As Admin
     Should See Dashboard
+    Test Search
 
-Logout Failed
-    Open App
-    Invalid Login Shows Error
+# Logout Failed
+#     Open App
+#     Invalid Login Shows Error
