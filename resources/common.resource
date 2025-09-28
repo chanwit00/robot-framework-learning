@@ -9,6 +9,7 @@ ${PASSWORD}      admin123
 ${DASHBOARD_H1}  css=h6.oxd-topbar-header-breadcrumb-module
 ${search_Admin}   Admin
 ${search_Pim}   PIM
+${search_Time}   Time
 ${search_Claim}   Claim
 
 *** Keywords ***
@@ -47,6 +48,16 @@ Search PIM
     Wait Until Page Contains    Employee Information     5s
     Click Element    (//input[@placeholder="Type for hints..."])[1]
     Input Text    (//input[@placeholder="Type for hints..."])[1]    Nezuko
+    Click Element   css=button[type="submit"]
+
+Search Time
+    Input Text    css=input[placeholder="Search"]    ${search_Time} 
+    Press Keys    css=input[placeholder="Search"]    RETURN
+    Wait Until Page Contains    ${search_Time}   5s
+    Click Element    xpath=//span[text()="${search_Time}"]
+    Wait Until Page Contains    Select Employee     5s
+    Click Element    (//input[@placeholder="Type for hints..."])[1]
+    Input Text    (//input[@placeholder="Type for hints..."])[1]    Green
     Click Element   css=button[type="submit"]
 
 Logout

@@ -1,22 +1,29 @@
 *** Settings ***
 Resource       ../resources/common.resource
+Suite Setup    Open App
 Test Teardown  Close App
 
 *** Test Cases ***
-# Login Successful
-#     Open App
-#     Login As Admin
-#     Should See Dashboard
+Login Successful
+    [Tags]    type:smoke    feature:auth    env:sit    flow:login_success
+    Login As Admin
+    Should See Dashboard
 
-
-# Logout Failed
-#     Open App
-#     Invalid Login Shows Error
+Logout Failed
+    [Tags]    type:regression    feature:auth    env:sit    flow:login_negative
+    Invalid Login Shows Error
 
 Test Search and actions in PIM
-    Open App
+    [Tags]    type:regression    feature:pim    env:sit    flow:pim_search
     Login As Admin
     Should See Dashboard
     Search
     Search PIM
     Logout
+
+# Test Search and actions in Time
+#     Login As Admin
+#     Should See Dashboard
+#     Search
+#     Search Time
+#     Logout

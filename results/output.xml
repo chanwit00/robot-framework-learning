@@ -1,169 +1,217 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-09-28T20:34:31.786087" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-09-28T21:22:26.426711" rpa="false" schemaversion="5">
 <suite id="s1" name="Login Test" source="C:\Users\Grxxn\robot_demo\Train\login_test.robot">
-<test id="s1-t1" name="Test Search and actions in PIM" line="16">
-<kw name="Open App" owner="common">
+<kw name="Open App" owner="common" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-09-28T20:34:31.941982" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<msg time="2025-09-28T21:22:26.601259" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
 <arg>${BASE_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-09-28T20:34:31.941798" elapsed="4.524237"/>
+<status status="PASS" start="2025-09-28T21:22:26.601064" elapsed="4.539493"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-09-28T20:34:36.466223" elapsed="0.026960"/>
+<status status="PASS" start="2025-09-28T21:22:31.140743" elapsed="0.031254"/>
 </kw>
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
 <arg>0.2</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2025-09-28T20:34:36.493334" elapsed="0.000211"/>
+<status status="PASS" start="2025-09-28T21:22:31.172146" elapsed="0.000158"/>
 </kw>
-<status status="PASS" start="2025-09-28T20:34:31.941278" elapsed="4.552379"/>
+<status status="PASS" start="2025-09-28T21:22:26.600620" elapsed="4.571744"/>
 </kw>
+<test id="s1-t1" name="Login Successful" line="7">
 <kw name="Login As Admin" owner="common">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>name=username</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-28T20:34:36.494126" elapsed="0.824164"/>
+<status status="PASS" start="2025-09-28T21:22:31.172981" elapsed="0.838289"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-28T20:34:37.318803" level="INFO">Typing text 'Admin' into text field 'name=username'.</msg>
+<msg time="2025-09-28T21:22:32.011663" level="INFO">Typing text 'Admin' into text field 'name=username'.</msg>
 <arg>name=username</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-28T20:34:37.318513" elapsed="0.678027"/>
+<status status="PASS" start="2025-09-28T21:22:32.011451" elapsed="0.680388"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-28T20:34:37.997773" level="INFO">Typing text 'admin123' into text field 'name=password'.</msg>
+<msg time="2025-09-28T21:22:32.692184" level="INFO">Typing text 'admin123' into text field 'name=password'.</msg>
 <arg>name=password</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-28T20:34:37.997090" elapsed="0.705426"/>
+<status status="PASS" start="2025-09-28T21:22:32.691999" elapsed="0.654557"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-09-28T20:34:38.703612" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
+<msg time="2025-09-28T21:22:33.346952" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
 <arg>css=button[type="submit"]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-28T20:34:38.703068" elapsed="1.084464"/>
+<status status="PASS" start="2025-09-28T21:22:33.346758" elapsed="1.052079"/>
 </kw>
-<status status="PASS" start="2025-09-28T20:34:36.493943" elapsed="3.293877"/>
+<status status="PASS" start="2025-09-28T21:22:31.172811" elapsed="3.226145"/>
 </kw>
 <kw name="Should See Dashboard" owner="common">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${DASHBOARD_H1}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-28T20:34:39.789094" elapsed="1.697716"/>
+<status status="PASS" start="2025-09-28T21:22:34.399600" elapsed="1.682453"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-09-28T20:34:41.900822" level="INFO">Current page contains text 'Dashboard'.</msg>
+<msg time="2025-09-28T21:22:36.492028" level="INFO">Current page contains text 'Dashboard'.</msg>
 <arg>Dashboard</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-09-28T20:34:41.487178" elapsed="0.413862"/>
+<status status="PASS" start="2025-09-28T21:22:36.082211" elapsed="0.409978"/>
 </kw>
-<status status="PASS" start="2025-09-28T20:34:39.788485" elapsed="2.112756"/>
-</kw>
-<kw name="Search" owner="common">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-28T20:34:41.903093" level="INFO">Clicking element 'css=input[placeholder="Search"]'.</msg>
-<arg>css=input[placeholder="Search"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-28T20:34:41.902591" elapsed="0.489253"/>
-</kw>
-<status status="PASS" start="2025-09-28T20:34:41.901799" elapsed="0.490160"/>
-</kw>
-<kw name="Search PIM" owner="common">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-28T20:34:42.392591" level="INFO">Typing text 'PIM' into text field 'css=input[placeholder="Search"]'.</msg>
-<arg>css=input[placeholder="Search"]</arg>
-<arg>${search_Pim}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-28T20:34:42.392433" elapsed="0.654725"/>
-</kw>
-<kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-09-28T20:34:43.047621" level="INFO">Sending key(s) ('RETURN',) to css=input[placeholder="Search"] element.</msg>
-<msg time="2025-09-28T20:34:43.727395" level="INFO">Pressing special key RETURN to element.</msg>
-<msg time="2025-09-28T20:34:43.727474" level="INFO">Releasing special key RETURN.</msg>
-<arg>css=input[placeholder="Search"]</arg>
-<arg>RETURN</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-09-28T20:34:43.047325" elapsed="0.883647"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>${search_Pim}</arg>
-<arg>5s</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-09-28T20:34:43.931209" elapsed="0.209911"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-28T20:34:44.142577" level="INFO">Clicking element 'xpath=//span[text()="PIM"]'.</msg>
-<arg>xpath=//span[text()="${search_Pim}"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-28T20:34:44.141698" elapsed="1.230271"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>Employee Information</arg>
-<arg>5s</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-09-28T20:34:45.372371" elapsed="0.624870"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-28T20:34:45.997564" level="INFO">Clicking element '(//input[@placeholder="Type for hints..."])[1]'.</msg>
-<arg>(//input[@placeholder="Type for hints..."])[1]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-28T20:34:45.997407" elapsed="0.503923"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-28T20:34:46.502432" level="INFO">Typing text 'Nezuko' into text field '(//input[@placeholder="Type for hints..."])[1]'.</msg>
-<arg>(//input[@placeholder="Type for hints..."])[1]</arg>
-<arg>Nezuko</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-28T20:34:46.501860" elapsed="0.642428"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-28T20:34:47.144585" level="INFO">Clicking element 'css=button[type="submit"]'.</msg>
-<arg>css=button[type="submit"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-28T20:34:47.144444" elapsed="0.463016"/>
-</kw>
-<status status="PASS" start="2025-09-28T20:34:42.392218" elapsed="5.215566"/>
-</kw>
-<kw name="Logout" owner="common">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-28T20:34:47.609838" level="INFO">Clicking element 'css=span.oxd-userdropdown-tab'.</msg>
-<arg>css=span.oxd-userdropdown-tab</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-28T20:34:47.609246" elapsed="0.444277"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-28T20:34:48.054349" level="INFO">Clicking element 'xpath=//a[text()="Logout"]'.</msg>
-<arg>xpath=//a[text()="Logout"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-28T20:34:48.053925" elapsed="1.148626"/>
-</kw>
-<status status="PASS" start="2025-09-28T20:34:47.608515" elapsed="1.594407"/>
+<status status="PASS" start="2025-09-28T21:22:34.399318" elapsed="2.092996"/>
 </kw>
 <kw name="Close App" owner="common" type="TEARDOWN">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2025-09-28T20:34:49.205279" elapsed="2.335661"/>
+<status status="PASS" start="2025-09-28T21:22:36.492895" elapsed="2.335068"/>
 </kw>
-<status status="PASS" start="2025-09-28T20:34:49.204378" elapsed="2.336916"/>
+<status status="PASS" start="2025-09-28T21:22:36.492682" elapsed="2.335393"/>
 </kw>
-<status status="PASS" start="2025-09-28T20:34:31.940831" elapsed="19.601395"/>
+<tag>env:sit</tag>
+<tag>feature:auth</tag>
+<tag>flow:login_success</tag>
+<tag>type:smoke</tag>
+<status status="PASS" start="2025-09-28T21:22:31.172434" elapsed="7.655819"/>
 </test>
-<status status="PASS" start="2025-09-28T20:34:31.787185" elapsed="19.757563"/>
+<test id="s1-t2" name="Logout Failed" line="12">
+<kw name="Invalid Login Shows Error" owner="common">
+<kw name="Open App" owner="common">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-09-28T21:22:38.829502" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-09-28T21:22:38.829358" elapsed="4.282428"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-28T21:22:43.111943" elapsed="0.220615"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.2</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-09-28T21:22:43.332762" elapsed="0.000233"/>
+</kw>
+<status status="PASS" start="2025-09-28T21:22:38.829213" elapsed="4.503882"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-28T21:22:43.333391" level="INFO">Typing text 'wronguser' into text field 'name=username'.</msg>
+<arg>name=username</arg>
+<arg>wronguser</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-28T21:22:43.333215" elapsed="0.652346"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-28T21:22:43.985868" level="INFO">Typing text 'wrongpass' into text field 'name=password'.</msg>
+<arg>name=password</arg>
+<arg>wrongpass</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-28T21:22:43.985713" elapsed="0.643790"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-28T21:22:44.629908" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
+<arg>css=button[type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-28T21:22:44.629711" elapsed="1.051057"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Invalid credentials</arg>
+<arg>5s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-09-28T21:22:45.680922" elapsed="1.132373"/>
+</kw>
+<status status="PASS" start="2025-09-28T21:22:38.829042" elapsed="7.984358"/>
+</kw>
+<kw name="Close App" owner="common" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-09-28T21:22:46.813937" elapsed="2.268456"/>
+</kw>
+<status status="PASS" start="2025-09-28T21:22:46.813728" elapsed="2.268798"/>
+</kw>
+<tag>env:sit</tag>
+<tag>feature:auth</tag>
+<tag>flow:login_negative</tag>
+<tag>type:regression</tag>
+<status status="PASS" start="2025-09-28T21:22:38.828748" elapsed="10.253984"/>
+</test>
+<test id="s1-t3" name="Test Search and actions in PIM" line="16">
+<kw name="Login As Admin" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-09-28T21:22:49.083816" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-09-28T21:22:49.083911" level="FAIL">No browser is open.</msg>
+<arg>name=username</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-09-28T21:22:49.083626" elapsed="0.002323">No browser is open.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name=username</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-09-28T21:22:49.086075" elapsed="0.000024"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-09-28T21:22:49.086168" elapsed="0.000019"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>css=button[type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-09-28T21:22:49.086248" elapsed="0.000106"/>
+</kw>
+<status status="FAIL" start="2025-09-28T21:22:49.083447" elapsed="0.003008">No browser is open.</status>
+</kw>
+<kw name="Should See Dashboard" owner="common">
+<status status="NOT RUN" start="2025-09-28T21:22:49.086636" elapsed="0.000029"/>
+</kw>
+<kw name="Search" owner="common">
+<status status="NOT RUN" start="2025-09-28T21:22:49.086791" elapsed="0.000020"/>
+</kw>
+<kw name="Search PIM" owner="common">
+<status status="NOT RUN" start="2025-09-28T21:22:49.086989" elapsed="0.000044"/>
+</kw>
+<kw name="Logout" owner="common">
+<status status="NOT RUN" start="2025-09-28T21:22:49.087249" elapsed="0.000034"/>
+</kw>
+<kw name="Close App" owner="common" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-09-28T21:22:49.087837" elapsed="0.000136"/>
+</kw>
+<status status="PASS" start="2025-09-28T21:22:49.087574" elapsed="0.000479"/>
+</kw>
+<tag>env:sit</tag>
+<tag>feature:pim</tag>
+<tag>flow:pim_search</tag>
+<tag>type:regression</tag>
+<status status="FAIL" start="2025-09-28T21:22:49.083156" elapsed="0.005022">No browser is open.</status>
+</test>
+<status status="FAIL" start="2025-09-28T21:22:26.427678" elapsed="22.661314"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="2" fail="1" skip="0">env:sit</stat>
+<stat pass="2" fail="0" skip="0">feature:auth</stat>
+<stat pass="0" fail="1" skip="0">feature:pim</stat>
+<stat pass="1" fail="0" skip="0">flow:login_negative</stat>
+<stat pass="1" fail="0" skip="0">flow:login_success</stat>
+<stat pass="0" fail="1" skip="0">flow:pim_search</stat>
+<stat pass="1" fail="1" skip="0">type:regression</stat>
+<stat pass="1" fail="0" skip="0">type:smoke</stat>
 </tag>
 <suite>
-<stat name="Login Test" id="s1" pass="1" fail="0" skip="0">Login Test</stat>
+<stat name="Login Test" id="s1" pass="2" fail="1" skip="0">Login Test</stat>
 </suite>
 </statistics>
 <errors>
