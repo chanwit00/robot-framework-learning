@@ -38,11 +38,11 @@ Should See Dashboard
 
 Search
     Click Element    css=input[placeholder="Search"]
+
+Search PIM
     Input Text    css=input[placeholder="Search"]    ${search_Pim} 
     Press Keys    css=input[placeholder="Search"]    RETURN
     Wait Until Page Contains    ${search_Pim}     5s
-
-PIM
     Click Element    xpath=//span[text()="${search_Pim}"]
     Wait Until Page Contains    Employee Information     5s
     Click Element    (//input[@placeholder="Type for hints..."])[1]
